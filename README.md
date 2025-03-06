@@ -9,7 +9,7 @@
 ---
 
 ### 🖥️ **Overview**
-🚀 **Python Is Easy** is an interactive web-based learning platform built with **Streamlit**. It provides step-by-step lessons on Python fundamentals, with hands-on coding exercises to help beginners practice in real-time.
+🚀 **Python Is Easy** is an interactive web-based learning platform built with **Streamlit**. It provides step-by-step lessons on Python fundamentals, with hands-on coding exercises to help beginners or kids practice in real-time.
 
 🔹 Features:
 - 📌 **Well-structured Lessons** – Learn **Variables, Loops, Functions**, and more.
