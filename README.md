@@ -18,8 +18,8 @@
 - 📊 **Instant Feedback** – See the output of your code instantly.
 - 💡 **Beginner-Friendly** – Perfect for new programmers.
 
-🔗 **Live Preview Coming Soon...**
-
+🔗 **🚀 Live Preview.**
+🔗 Try the **Python Is Easy App** on Streamlit **👉 [Click Here](https://python-is-easy.streamlit.app/)**
 ---
 
 ## 🛠️ **Installation & Setup**
