@@ -26,10 +26,18 @@ jobs:
         run: |
           python -m build
 
+      - name: Create .pypirc file
+        run: |
+          cat <<EOF > ~/.pypirc
+[pypi]
+repository: https://upload.pypi.org/legacy/
+username = __token__
+password = $PYPI_API_TOKEN
+EOF
+        env:
+          PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@v1.4.2
-        with:
-          user: __token__
-          password: ${{ secrets.PASSWORD }}
-          packages_dir: dist
-          repository_url: https://upload.pypi.org/legacy/
+        run: |
+          pip install twine
+          twine upload --repository pypi dist/*
