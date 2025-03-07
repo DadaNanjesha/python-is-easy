@@ -32,7 +32,7 @@ jobs:
           index-servers = 
               main
 
-          [github]
+          [main]
           repository: https://github.com/DadaNanjesha/python-is-easy/${{ github.repository_owner }}
           username: __token__
           password: $TWINE_PASSWORD
