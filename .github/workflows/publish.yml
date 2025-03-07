@@ -28,4 +28,4 @@ jobs:
           user: __token__
           password: ${{secrets.GITHUB_TOKEN }}
           packages_dir: dist
-          repository_url: https://pypi.pkg.github.com/${{ github.repository_owner }}
+          repository_url: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}
