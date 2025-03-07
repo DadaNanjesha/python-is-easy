@@ -29,10 +29,11 @@ jobs:
         run: |
           cat <<EOF > ~/.pypirc
           [distutils]
-          index-servers = github
+          index-servers = 
+              main
 
           [github]
-          repository: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}
+          repository: https://github.com/DadaNanjesha/python-is-easy/${{ github.repository_owner }}
           username: __token__
           password: $TWINE_PASSWORD
           EOF
