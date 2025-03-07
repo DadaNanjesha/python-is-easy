@@ -1,0 +1,225 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "contextlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "variables",
+        "importPath": "lessons",
+        "description": "lessons",
+        "isExtraImport": true,
+        "detail": "lessons",
+        "documentation": {}
+    },
+    {
+        "label": "loops",
+        "importPath": "lessons",
+        "description": "lessons",
+        "isExtraImport": true,
+        "detail": "lessons",
+        "documentation": {}
+    },
+    {
+        "label": "functions",
+        "importPath": "lessons",
+        "description": "lessons",
+        "isExtraImport": true,
+        "detail": "lessons",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "find_packages",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "execute_and_capture",
+        "kind": 2,
+        "importPath": "lessons.functions",
+        "description": "lessons.functions",
+        "peekOfCode": "def execute_and_capture(code: str) -> Optional[str]:\n    \"\"\"\n    Executes the provided Python code and captures its output.\n    Parameters:\n        code (str): The Python code to execute.\n    Returns:\n        Optional[str]: The captured output as a string if successful, otherwise None.\n    \"\"\"\n    output_buffer: StringIO = StringIO()\n    try:",
+        "detail": "lessons.functions",
+        "documentation": {}
+    },
+    {
+        "label": "render_header",
+        "kind": 2,
+        "importPath": "lessons.functions",
+        "description": "lessons.functions",
+        "peekOfCode": "def render_header(text: str) -> None:\n    \"\"\"\n    Renders a custom HTML header to highlight the lesson title.\n    Parameters:\n        text (str): The header text to display.\n    \"\"\"\n    header_html: str = f\"\"\"\n    <div class=\"custom-header\">\n        <h2>{text}</h2>\n    </div>",
+        "detail": "lessons.functions",
+        "documentation": {}
+    },
+    {
+        "label": "display",
+        "kind": 2,
+        "importPath": "lessons.functions",
+        "description": "lessons.functions",
+        "peekOfCode": "def display() -> None:\n    \"\"\"\n    Renders the Functions lesson, including explanations, examples, and an interactive code editor.\n    \"\"\"\n    render_header(\"Lesson: Functions\")\n    st.write(\n        \"\"\"\n        Functions are blocks of code that perform a specific task and can be reused throughout your program.\n        They help break down complex problems into smaller, manageable pieces. In Python, functions are defined\n        using the `def` keyword.",
+        "detail": "lessons.functions",
+        "documentation": {}
+    },
+    {
+        "label": "greet",
+        "kind": 2,
+        "importPath": "lessons.functions",
+        "description": "lessons.functions",
+        "peekOfCode": "def greet(name):\n    print(\"Hello, \" + name + \"!\")\ngreet(\"Alice\")\n        \"\"\",\n        language='python'\n    )\n    st.write(\n        \"\"\"\n        In this example, the function `greet()` takes a parameter `name` and prints a greeting message.\n        \"\"\"",
+        "detail": "lessons.functions",
+        "documentation": {}
+    },
+    {
+        "label": "execute_and_capture",
+        "kind": 2,
+        "importPath": "lessons.loops",
+        "description": "lessons.loops",
+        "peekOfCode": "def execute_and_capture(code: str) -> Optional[str]:\n    \"\"\"\n    Executes the provided Python code and captures its output.\n    Parameters:\n        code (str): The Python code to execute.\n    Returns:\n        Optional[str]: The captured output as a string if successful, otherwise None.\n    \"\"\"\n    output_buffer: StringIO = StringIO()\n    try:",
+        "detail": "lessons.loops",
+        "documentation": {}
+    },
+    {
+        "label": "render_header",
+        "kind": 2,
+        "importPath": "lessons.loops",
+        "description": "lessons.loops",
+        "peekOfCode": "def render_header(text: str) -> None:\n    \"\"\"\n    Renders a custom HTML header to highlight the lesson title.\n    Parameters:\n        text (str): The header text to display.\n    \"\"\"\n    header_html: str = f\"\"\"\n    <div class=\"custom-header\">\n        <h2>{text}</h2>\n    </div>",
+        "detail": "lessons.loops",
+        "documentation": {}
+    },
+    {
+        "label": "display",
+        "kind": 2,
+        "importPath": "lessons.loops",
+        "description": "lessons.loops",
+        "peekOfCode": "def display() -> None:\n    \"\"\"\n    Renders the Loops lesson, including explanations, code examples, and an interactive editor.\n    \"\"\"\n    render_header(\"Lesson: Loops\")\n    # Explanation similar to W3Schools style\n    st.write(\n        \"\"\"\n        Loops are used in Python to execute a block of code repeatedly. Python supports two main types of loops:\n        `for` loops and `while` loops. In this lesson, we will focus on `for` loops.",
+        "detail": "lessons.loops",
+        "documentation": {}
+    },
+    {
+        "label": "fruits",
+        "kind": 5,
+        "importPath": "lessons.loops",
+        "description": "lessons.loops",
+        "peekOfCode": "fruits = ['apple', 'banana', 'cherry']\nfor fruit in fruits:\n    print(fruit)\n        \"\"\",\n        language='python'\n    )\n    st.write(\n        \"\"\"\n        In this example, the `for` loop iterates over each element in the list `fruits` and prints it.\n        \"\"\"",
+        "detail": "lessons.loops",
+        "documentation": {}
+    },
+    {
+        "label": "execute_and_capture",
+        "kind": 2,
+        "importPath": "lessons.variables",
+        "description": "lessons.variables",
+        "peekOfCode": "def execute_and_capture(code: str) -> Optional[str]:\n    \"\"\"\n    Executes the given Python code and captures its output.\n    Parameters:\n        code (str): The Python code to execute.\n    Returns:\n        Optional[str]: The captured output if execution succeeds, or None on error.\n    \"\"\"\n    output_buffer: StringIO = StringIO()\n    try:",
+        "detail": "lessons.variables",
+        "documentation": {}
+    },
+    {
+        "label": "render_header",
+        "kind": 2,
+        "importPath": "lessons.variables",
+        "description": "lessons.variables",
+        "peekOfCode": "def render_header(text: str) -> None:\n    \"\"\"\n    Renders a custom HTML header to highlight the lesson title.\n    Parameters:\n        text (str): The header text to display.\n    \"\"\"\n    header_html: str = f\"\"\"\n    <div class=\"custom-header\">\n        <h2>{text}</h2>\n    </div>",
+        "detail": "lessons.variables",
+        "documentation": {}
+    },
+    {
+        "label": "display",
+        "kind": 2,
+        "importPath": "lessons.variables",
+        "description": "lessons.variables",
+        "peekOfCode": "def display() -> None:\n    \"\"\"\n    Renders the Variables lesson with explanations and interactive examples,\n    inspired by the style of W3Schools Python Variables tutorial.\n    \"\"\"\n    render_header(\"Lesson: Variables\")\n    # Explanation similar to W3Schools\n    st.write(\n        \"\"\"\n        Python variables are containers for storing data values. Unlike some other programming languages,",
+        "detail": "lessons.variables",
+        "documentation": {}
+    },
+    {
+        "label": "render_header",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def render_header(text: str) -> None:\n    header_html = f\"\"\"\n    <div class=\"custom-header\">\n        <h1>{\"Python Is Easy\"}</h1>\n        <h4>{\"Welcome to your interactive Python learning app!\"}</h4>\n    </div>\n    \"\"\"\n    st.markdown(header_html, unsafe_allow_html=True)\nrender_header(\"Python Is Easy\")\n# Initialize session state for page selection",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "local_css",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def local_css(file_name):\n    with open(file_name) as f:\n        css = f.read()\n    st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)\n# Call the function at the top of your app\nlocal_css(\"assets/styles.css\")",
+        "detail": "app",
+        "documentation": {}
+    }
+]
