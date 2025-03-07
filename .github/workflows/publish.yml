@@ -26,6 +26,6 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.4.2
         with:
           user: __token__
-          password: ${{ secrets.TWINE_TOKEN }}
+          password: ${{secrets.GITHUB_TOKEN }}
           packages_dir: dist
           repository_url: https://pypi.pkg.github.com/${{ github.repository_owner }}
