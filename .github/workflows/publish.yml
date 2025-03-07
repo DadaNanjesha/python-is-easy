@@ -30,9 +30,9 @@ jobs:
           cat <<EOF > ~/.pypirc
           [distutils]
           index-servers = 
-              github
+              pypi
 
-          [github]
+          [pypi]
           repository: https://pypi.pkg.github.com/${{ github.repository_owner }}
           username: __token__
           password: $TWINE_PASSWORD
@@ -43,4 +43,4 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          twine upload --repository github dist/*
+          twine upload --repository pypi dist/*
