@@ -35,7 +35,7 @@ jobs:
           [pypi]
           repository: https://pypi.pkg.github.com/${{ github.repository_owner }}
           username: __token__
-          password: $TWINE_PASSWORD
+          password: $PASSWORD
           EOF
 
       - name: Publish package to GitHub Packages
