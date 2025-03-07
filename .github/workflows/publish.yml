@@ -7,6 +7,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  # Required for GitHub Packages
 
     steps:
       - name: Checkout repository
@@ -22,10 +25,21 @@ jobs:
           pip install build
           python -m build
 
+      - name: Configure .pypirc
+        run: |
+          cat << EOF > ~/.pypirc
+          [distutils]
+          index-servers =
+              github
+
+          [github]
+          repository = https://upload.pypi.github.com/${{ github.repository_owner }}
+          username = ${{ github.actor }}
+          password = ${{ secrets.GITHUB_TOKEN }}
+          EOF
+
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@v1.4.2
+        uses: pypa/gh-action-pypi-publish@v1.8.8
         with:
-          user: __token__
-          password: ${{secrets.PYPI_API_TOKEN}}
-          packages_dir: dist
-          repository_url: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}
+          verbose: true
+          packages-dir: dist
