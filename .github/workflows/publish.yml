@@ -7,6 +7,9 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -35,12 +38,12 @@ jobs:
           [pypi]
           repository: https://pypi.pkg.github.com/${{ github.repository_owner }}
           username: __token__
-          password: $PASSWORD
+          password: ${{ secrets.PASSWORD }}
           EOF
 
       - name: Publish package to GitHub Packages
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           twine upload --repository pypi dist/*
