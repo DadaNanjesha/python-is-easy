@@ -27,15 +27,19 @@ jobs:
 
       - name: Create .pypirc file
         run: |
-          echo "[distutils]" > ~/.pypirc
-          echo "index-servers =" >> ~/.pypirc
-          echo "    github" >> ~/.pypirc
-          echo "" >> ~/.pypirc
-          echo "[github]" >> ~/.pypirc
-          echo "repository: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}" >> ~/.pypirc
-          echo "username: __token__" >> ~/.pypirc
-          echo "password: ${{ secrets.GITHUB_TOKEN }}" >> ~/.pypirc
+          cat <<EOF > ~/.pypirc
+          [distutils]
+          index-servers = github
+
+          [github]
+          repository: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}
+          username: __token__
+          password: $TWINE_PASSWORD
+          EOF
 
       - name: Publish package to GitHub Packages
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: |
           twine upload --repository github dist/*
