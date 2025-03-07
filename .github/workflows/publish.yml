@@ -2,8 +2,7 @@ name: Publish Package to GitHub Packages
 
 on:
   release:
-    types: 
-      - published
+    types: [created]
 
 jobs:
   publish:
@@ -26,7 +25,7 @@ jobs:
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@v1.4.2
         with:
-            password: ${{secrets.PASSWORD}}
-        env:
-            TWINE_USERNAME: __token__
-            TWINE_REPOSITORY_URL: https://pypi.pkg.github.com/${{github.repository_owner}}
+          user: __token__
+          password: ${{ secrets.TWINE_TOKEN }}
+          packages_dir: dist
+          repository_url: https://pypi.pkg.github.com/${{ github.repository_owner }}
