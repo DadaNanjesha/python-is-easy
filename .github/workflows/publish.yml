@@ -1,4 +1,4 @@
-name: Publish Package to GitHub Packages
+name: Publish Package to PyPI
 
 on:
   release:
@@ -17,15 +17,19 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install build tools
+        run: |
+          pip install --upgrade pip
+          pip install build
+
       - name: Build package
         run: |
-          pip install build
           python -m build
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@v1.4.2
         with:
           user: __token__
-          password: ${{secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.PASSWORD }}
           packages_dir: dist
-          repository_url: https://upload.pypi.pkg.github.com/${{ github.repository_owner }}
+          repository_url: https://upload.pypi.org/legacy/
