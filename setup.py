@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="python-is-easy",             
+    name="learn-python-easy",             
     version="1.0.0",                    
     author="Dada Nanjesha Gouda Shanbog",
     description="An interactive Streamlit app to help people learn Python easily",
