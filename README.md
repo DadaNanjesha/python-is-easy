@@ -109,6 +109,16 @@ Want to improve **Python Is Easy**? We’d love your contributions!
 We’ll review and merge your changes! 🚀
 
 ---
+## ⭐️ Support & Call-to-Action
+
+If you find this project useful, please consider:
+- **Starring** the repository ⭐️
+- **Forking** the project to contribute enhancements
+- **Following** for updates on future improvements
+
+Your engagement helps increase visibility and encourages further collaboration!
+
+---
 
 ## ⚖️ **License**
 This project is licensed under the **MIT License**. See the **[LICENSE](LICENSE)** file for more details.
